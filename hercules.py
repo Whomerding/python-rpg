@@ -5,8 +5,9 @@ class Hercules (Player):
         super (). __init__ ()
         self.name = "Hercules"
     
-    def choose_attack (self):
-        self.attack_choice = input ("What attack would you like to choose?")
+    def hercules_attack (self):
+        self.choose_attack ()
+        
         
 
         

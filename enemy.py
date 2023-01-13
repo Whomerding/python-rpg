@@ -5,8 +5,13 @@ class Enemy (Player):
     def __init__(self):
         super ().__init__()
         self.enemy_list = ["Hera", "The Cyclops", "The Minotaur", "Modern Life"]
-        self.enemy_name = random.choice (self.enemy_list)
-        
+        self.enemy_name = random.choice(self.enemy_list)
+        self.attack_name = self.change_attack_random()
+        self.attack_power = dict [self.attack_name]
+
+    def ai_attack (self):
+        self.attack_power = self.change_attack_random ()
+
     """""
     def hera (self):
         if self.enemy_name == "Hera":
