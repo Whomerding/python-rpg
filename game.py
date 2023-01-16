@@ -14,11 +14,10 @@ class Game:
         while self.hercules.health > 0 and self.enemy.health > 0:
             self.hercules.choose_attack ()
             self.enemy.health -= self.hercules.attack_power
-            print (f"Hercules has chosen to attack with {self.hercules.attack_name}!  {self.enemy.enemy_name} has {self.enemy.health} remaining!")
+            print (f"Hercules has chosen to attack with {self.hercules.attack_name_choice}!  {self.enemy.enemy_name} has {self.enemy.health}% health remaining!")
             self.enemy.change_attack_random ()
             self.hercules.health -= self.enemy.attack_power
-            print (f"{self.enemy.enemy_name} has attacked with {self.enemy.attack_power}!  Hercules has {self.hercules.health} remaining!")
-
+            print (f"{self.enemy.enemy_name} has attacked with {self.enemy.attack_name_choice}!  Hercules has {self.hercules.health} remaining!")
     def declare_victor (self):
         if self.hercules.health > 0:
             print ("Hercules is victorious!!  Congratulations!")
