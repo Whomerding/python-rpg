@@ -8,6 +8,11 @@ class Hercules (Player):
     def hercules_attack (self):
         self.choose_attack ()
 
+    def hercules_strength (self):
+        if self.defending_against == "your mama!":
+            print ("Your mama, instead of attacking, has become infatuated with Hercules.  The attack fails!")
+            self.health += 15
+
     def hercules_weakness (self):
         if self.defending_against == "bow and arrow":
             self.health -= 40
